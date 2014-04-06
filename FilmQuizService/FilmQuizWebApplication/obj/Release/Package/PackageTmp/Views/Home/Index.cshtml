@@ -1,0 +1,15 @@
+﻿@using FilmQuizWebApplication.FilmQuizServiceReference;
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<ul>
+    @foreach (CategoryDTO c in ViewBag.Categories)
+    {
+        <li>
+            @c.Name + @c.Id 
+        </li>
+    }
+</ul>

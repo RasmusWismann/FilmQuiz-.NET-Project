@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FilmQuizDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Answers">
+    <Key>
+      <PropertyRef Name="A_Id" />
+    </Key>
+    <Property Name="A_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Answer" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Questions" Relationship="Self.FK__Questions__Answe__49C3F6B7" FromRole="Answers" ToRole="Questions" />
+    <NavigationProperty Name="Questions1" Relationship="Self.FakeAnswersToQuestions" FromRole="Answers" ToRole="Questions" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="C_Id" />
+    </Key>
+    <Property Name="C_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Questions">
+    <Key>
+      <PropertyRef Name="Q_Id" />
+    </Key>
+    <Property Name="Q_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Answer" Type="Int32" />
+    <NavigationProperty Name="Answers" Relationship="Self.FK__Questions__Answe__49C3F6B7" FromRole="Questions" ToRole="Answers" />
+    <NavigationProperty Name="Answers1" Relationship="Self.FakeAnswersToQuestions" FromRole="Questions" ToRole="Answers" />
+  </EntityType>
+  <Association Name="FK__Questions__Answe__49C3F6B7">
+    <End Role="Answers" Type="Self.Answers" Multiplicity="0..1" />
+    <End Role="Questions" Type="Self.Questions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Answers">
+        <PropertyRef Name="A_Id" />
+      </Principal>
+      <Dependent Role="Questions">
+        <PropertyRef Name="Answer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FakeAnswersToQuestions">
+    <End Role="Answers" Type="Self.Answers" Multiplicity="*" />
+    <End Role="Questions" Type="Self.Questions" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="FilmQuizDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Answers" EntityType="Self.Answers" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" />
+    <EntitySet Name="Questions" EntityType="Self.Questions" />
+    <AssociationSet Name="FK__Questions__Answe__49C3F6B7" Association="Self.FK__Questions__Answe__49C3F6B7">
+      <End Role="Answers" EntitySet="Answers" />
+      <End Role="Questions" EntitySet="Questions" />
+    </AssociationSet>
+    <AssociationSet Name="FakeAnswersToQuestions" Association="Self.FakeAnswersToQuestions">
+      <End Role="Answers" EntitySet="Answers" />
+      <End Role="Questions" EntitySet="Questions" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,9 @@
+\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\Storage\bin\Debug\Storage.dll.config
+\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\Storage\bin\Debug\Storage.dll
+\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\Storage\bin\Debug\Storage.pdb
+\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\Storage\bin\Debug\EntityFramework.dll
+\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\Storage\bin\Debug\EntityFramework.SqlServer.dll
+\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\Storage\bin\Debug\EntityFramework.xml
+\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\Storage\bin\Debug\EntityFramework.SqlServer.xml
+\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\Storage\obj\Debug\Storage.dll
+\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\Storage\obj\Debug\Storage.pdb

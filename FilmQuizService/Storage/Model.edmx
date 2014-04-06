@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FilmQuizDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Answers">
+          <Key>
+            <PropertyRef Name="A_Id" />
+          </Key>
+          <Property Name="A_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Answer" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="C_Id" />
+          </Key>
+          <Property Name="C_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FakeAnswersToQuestions">
+          <Key>
+            <PropertyRef Name="Question" />
+            <PropertyRef Name="Answer" />
+          </Key>
+          <Property Name="Question" Type="int" Nullable="false" />
+          <Property Name="Answer" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GamePlayers">
+          <Key>
+            <PropertyRef Name="Player" />
+            <PropertyRef Name="Game" />
+          </Key>
+          <Property Name="Player" Type="int" Nullable="false" />
+          <Property Name="Game" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GameQuestions">
+          <Key>
+            <PropertyRef Name="Game" />
+            <PropertyRef Name="Question" />
+          </Key>
+          <Property Name="Game" Type="int" Nullable="false" />
+          <Property Name="Question" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Games">
+          <Key>
+            <PropertyRef Name="G_Id" />
+          </Key>
+          <Property Name="G_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="Turns" Type="int" Nullable="false" />
+          <Property Name="PlayerTurn" Type="int" Nullable="false" />
+          <Property Name="TurnNumber" Type="int" Nullable="false" />
+          <Property Name="Category" Type="int" />
+        </EntityType>
+        <EntityType Name="Players">
+          <Key>
+            <PropertyRef Name="P_Id" />
+          </Key>
+          <Property Name="P_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="Points" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Questions">
+          <Key>
+            <PropertyRef Name="Q_Id" />
+          </Key>
+          <Property Name="Q_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Question" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Answer" Type="int" />
+        </EntityType>
+        <Association Name="FK__FakeAnswe__Answe__4D94879B">
+          <End Role="Answers" Type="Self.Answers" Multiplicity="1" />
+          <End Role="FakeAnswersToQuestions" Type="Self.FakeAnswersToQuestions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Answers">
+              <PropertyRef Name="A_Id" />
+            </Principal>
+            <Dependent Role="FakeAnswersToQuestions">
+              <PropertyRef Name="Answer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FakeAnswe__Quest__4CA06362">
+          <End Role="Questions" Type="Self.Questions" Multiplicity="1" />
+          <End Role="FakeAnswersToQuestions" Type="Self.FakeAnswersToQuestions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questions">
+              <PropertyRef Name="Q_Id" />
+            </Principal>
+            <Dependent Role="FakeAnswersToQuestions">
+              <PropertyRef Name="Question" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GamePlaye__Playe__656C112C">
+          <End Role="Players" Type="Self.Players" Multiplicity="1" />
+          <End Role="GamePlayers" Type="Self.GamePlayers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Players">
+              <PropertyRef Name="P_Id" />
+            </Principal>
+            <Dependent Role="GamePlayers">
+              <PropertyRef Name="Player" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GamePlayer__Game__66603565">
+          <End Role="Games" Type="Self.Games" Multiplicity="1" />
+          <End Role="GamePlayers" Type="Self.GamePlayers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Games">
+              <PropertyRef Name="G_Id" />
+            </Principal>
+            <Dependent Role="GamePlayers">
+              <PropertyRef Name="Game" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameQuest__Quest__60A75C0F">
+          <End Role="Questions" Type="Self.Questions" Multiplicity="1" />
+          <End Role="GameQuestions" Type="Self.GameQuestions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questions">
+              <PropertyRef Name="Q_Id" />
+            </Principal>
+            <Dependent Role="GameQuestions">
+              <PropertyRef Name="Question" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameQuesti__Game__5FB337D6">
+          <End Role="Games" Type="Self.Games" Multiplicity="1" />
+          <End Role="GameQuestions" Type="Self.GameQuestions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Games">
+              <PropertyRef Name="G_Id" />
+            </Principal>
+            <Dependent Role="GameQuestions">
+              <PropertyRef Name="Game" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Games__Category__5CD6CB2B">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="Games" Type="Self.Games" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="C_Id" />
+            </Principal>
+            <Dependent Role="Games">
+              <PropertyRef Name="Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Questions__Answe__49C3F6B7">
+          <End Role="Answers" Type="Self.Answers" Multiplicity="0..1" />
+          <End Role="Questions" Type="Self.Questions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Answers">
+              <PropertyRef Name="A_Id" />
+            </Principal>
+            <Dependent Role="Questions">
+              <PropertyRef Name="Answer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FilmQuizDBModelStoreContainer">
+          <EntitySet Name="Answers" EntityType="Self.Answers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FakeAnswersToQuestions" EntityType="Self.FakeAnswersToQuestions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GamePlayers" EntityType="Self.GamePlayers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GameQuestions" EntityType="Self.GameQuestions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Games" EntityType="Self.Games" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Players" EntityType="Self.Players" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__FakeAnswe__Answe__4D94879B" Association="Self.FK__FakeAnswe__Answe__4D94879B">
+            <End Role="Answers" EntitySet="Answers" />
+            <End Role="FakeAnswersToQuestions" EntitySet="FakeAnswersToQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FakeAnswe__Quest__4CA06362" Association="Self.FK__FakeAnswe__Quest__4CA06362">
+            <End Role="Questions" EntitySet="Questions" />
+            <End Role="FakeAnswersToQuestions" EntitySet="FakeAnswersToQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GamePlaye__Playe__656C112C" Association="Self.FK__GamePlaye__Playe__656C112C">
+            <End Role="Players" EntitySet="Players" />
+            <End Role="GamePlayers" EntitySet="GamePlayers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GamePlayer__Game__66603565" Association="Self.FK__GamePlayer__Game__66603565">
+            <End Role="Games" EntitySet="Games" />
+            <End Role="GamePlayers" EntitySet="GamePlayers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameQuest__Quest__60A75C0F" Association="Self.FK__GameQuest__Quest__60A75C0F">
+            <End Role="Questions" EntitySet="Questions" />
+            <End Role="GameQuestions" EntitySet="GameQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameQuesti__Game__5FB337D6" Association="Self.FK__GameQuesti__Game__5FB337D6">
+            <End Role="Games" EntitySet="Games" />
+            <End Role="GameQuestions" EntitySet="GameQuestions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Games__Category__5CD6CB2B" Association="Self.FK__Games__Category__5CD6CB2B">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Games" EntitySet="Games" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Questions__Answe__49C3F6B7" Association="Self.FK__Questions__Answe__49C3F6B7">
+            <End Role="Answers" EntitySet="Answers" />
+            <End Role="Questions" EntitySet="Questions" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FilmQuizDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Answers">
+          <Key>
+            <PropertyRef Name="A_Id" />
+          </Key>
+          <Property Name="A_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Answer" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Questions" Relationship="Self.FK__Questions__Answe__49C3F6B7" FromRole="Answers" ToRole="Questions" />
+          <NavigationProperty Name="Questions1" Relationship="Self.FakeAnswersToQuestions" FromRole="Answers" ToRole="Questions" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="C_Id" />
+          </Key>
+          <Property Name="C_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Games" Relationship="Self.FK__Games__Category__5CD6CB2B" FromRole="Categories" ToRole="Games" />
+        </EntityType>
+        <EntityType Name="Games">
+          <Key>
+            <PropertyRef Name="G_Id" />
+          </Key>
+          <Property Name="G_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Turns" Type="Int32" Nullable="false" />
+          <Property Name="PlayerTurn" Type="Int32" Nullable="false" />
+          <Property Name="TurnNumber" Type="Int32" Nullable="false" />
+          <Property Name="Category" Type="Int32" />
+          <NavigationProperty Name="Categories" Relationship="Self.FK__Games__Category__5CD6CB2B" FromRole="Games" ToRole="Categories" />
+          <NavigationProperty Name="Players" Relationship="Self.GamePlayers" FromRole="Games" ToRole="Players" />
+          <NavigationProperty Name="Questions" Relationship="Self.GameQuestions" FromRole="Games" ToRole="Questions" />
+        </EntityType>
+        <EntityType Name="Players">
+          <Key>
+            <PropertyRef Name="P_Id" />
+          </Key>
+          <Property Name="P_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Points" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Games" Relationship="Self.GamePlayers" FromRole="Players" ToRole="Games" />
+        </EntityType>
+        <EntityType Name="Questions">
+          <Key>
+            <PropertyRef Name="Q_Id" />
+          </Key>
+          <Property Name="Q_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Question" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Answer" Type="Int32" />
+          <NavigationProperty Name="Answers" Relationship="Self.FK__Questions__Answe__49C3F6B7" FromRole="Questions" ToRole="Answers" />
+          <NavigationProperty Name="Answers1" Relationship="Self.FakeAnswersToQuestions" FromRole="Questions" ToRole="Answers" />
+          <NavigationProperty Name="Games" Relationship="Self.GameQuestions" FromRole="Questions" ToRole="Games" />
+        </EntityType>
+        <Association Name="FK__Questions__Answe__49C3F6B7">
+          <End Role="Answers" Type="Self.Answers" Multiplicity="0..1" />
+          <End Role="Questions" Type="Self.Questions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Answers">
+              <PropertyRef Name="A_Id" />
+            </Principal>
+            <Dependent Role="Questions">
+              <PropertyRef Name="Answer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Games__Category__5CD6CB2B">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="Games" Type="Self.Games" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="C_Id" />
+            </Principal>
+            <Dependent Role="Games">
+              <PropertyRef Name="Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FakeAnswersToQuestions">
+          <End Role="Answers" Type="Self.Answers" Multiplicity="*" />
+          <End Role="Questions" Type="Self.Questions" Multiplicity="*" />
+        </Association>
+        <Association Name="GamePlayers">
+          <End Role="Players" Type="Self.Players" Multiplicity="*" />
+          <End Role="Games" Type="Self.Games" Multiplicity="*" />
+        </Association>
+        <Association Name="GameQuestions">
+          <End Role="Questions" Type="Self.Questions" Multiplicity="*" />
+          <End Role="Games" Type="Self.Games" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="FilmQuizDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Answers" EntityType="Self.Answers" />
+          <EntitySet Name="Categories" EntityType="Self.Categories" />
+          <EntitySet Name="Games" EntityType="Self.Games" />
+          <EntitySet Name="Players" EntityType="Self.Players" />
+          <EntitySet Name="Questions" EntityType="Self.Questions" />
+          <AssociationSet Name="FK__Questions__Answe__49C3F6B7" Association="Self.FK__Questions__Answe__49C3F6B7">
+            <End Role="Answers" EntitySet="Answers" />
+            <End Role="Questions" EntitySet="Questions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Games__Category__5CD6CB2B" Association="Self.FK__Games__Category__5CD6CB2B">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Games" EntitySet="Games" />
+          </AssociationSet>
+          <AssociationSet Name="FakeAnswersToQuestions" Association="Self.FakeAnswersToQuestions">
+            <End Role="Answers" EntitySet="Answers" />
+            <End Role="Questions" EntitySet="Questions" />
+          </AssociationSet>
+          <AssociationSet Name="GamePlayers" Association="Self.GamePlayers">
+            <End Role="Players" EntitySet="Players" />
+            <End Role="Games" EntitySet="Games" />
+          </AssociationSet>
+          <AssociationSet Name="GameQuestions" Association="Self.GameQuestions">
+            <End Role="Questions" EntitySet="Questions" />
+            <End Role="Games" EntitySet="Games" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FilmQuizDBModelStoreContainer" CdmEntityContainer="FilmQuizDBEntities">
+          <EntitySetMapping Name="Answers">
+            <EntityTypeMapping TypeName="FilmQuizDBModel.Answers">
+              <MappingFragment StoreEntitySet="Answers">
+                <ScalarProperty Name="A_Id" ColumnName="A_Id" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="FilmQuizDBModel.Categories">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="C_Id" ColumnName="C_Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Games">
+            <EntityTypeMapping TypeName="FilmQuizDBModel.Games">
+              <MappingFragment StoreEntitySet="Games">
+                <ScalarProperty Name="G_Id" ColumnName="G_Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Turns" ColumnName="Turns" />
+                <ScalarProperty Name="PlayerTurn" ColumnName="PlayerTurn" />
+                <ScalarProperty Name="TurnNumber" ColumnName="TurnNumber" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Players">
+            <EntityTypeMapping TypeName="FilmQuizDBModel.Players">
+              <MappingFragment StoreEntitySet="Players">
+                <ScalarProperty Name="P_Id" ColumnName="P_Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Points" ColumnName="Points" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="FilmQuizDBModel.Questions">
+              <MappingFragment StoreEntitySet="Questions">
+                <ScalarProperty Name="Q_Id" ColumnName="Q_Id" />
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FakeAnswersToQuestions" TypeName="FilmQuizDBModel.FakeAnswersToQuestions" StoreEntitySet="FakeAnswersToQuestions">
+            <EndProperty Name="Answers">
+              <ScalarProperty Name="A_Id" ColumnName="Answer" />
+            </EndProperty>
+            <EndProperty Name="Questions">
+              <ScalarProperty Name="Q_Id" ColumnName="Question" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="GamePlayers" TypeName="FilmQuizDBModel.GamePlayers" StoreEntitySet="GamePlayers">
+            <EndProperty Name="Players">
+              <ScalarProperty Name="P_Id" ColumnName="Player" />
+            </EndProperty>
+            <EndProperty Name="Games">
+              <ScalarProperty Name="G_Id" ColumnName="Game" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="GameQuestions" TypeName="FilmQuizDBModel.GameQuestions" StoreEntitySet="GameQuestions">
+            <EndProperty Name="Questions">
+              <ScalarProperty Name="Q_Id" ColumnName="Question" />
+            </EndProperty>
+            <EndProperty Name="Games">
+              <ScalarProperty Name="G_Id" ColumnName="Game" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FilmQuizDBModelStoreContainer" CdmEntityContainer="FilmQuizDBEntities">
+    <EntitySetMapping Name="Answers">
+      <EntityTypeMapping TypeName="FilmQuizDBModel.Answers">
+        <MappingFragment StoreEntitySet="Answers">
+          <ScalarProperty Name="A_Id" ColumnName="A_Id" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="FilmQuizDBModel.Categories">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="C_Id" ColumnName="C_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Games">
+      <EntityTypeMapping TypeName="FilmQuizDBModel.Games">
+        <MappingFragment StoreEntitySet="Games">
+          <ScalarProperty Name="G_Id" ColumnName="G_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Turns" ColumnName="Turns" />
+          <ScalarProperty Name="PlayerTurn" ColumnName="PlayerTurn" />
+          <ScalarProperty Name="TurnNumber" ColumnName="TurnNumber" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="FilmQuizDBModel.Players">
+        <MappingFragment StoreEntitySet="Players">
+          <ScalarProperty Name="P_Id" ColumnName="P_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="FilmQuizDBModel.Questions">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="Q_Id" ColumnName="Q_Id" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FakeAnswersToQuestions" TypeName="FilmQuizDBModel.FakeAnswersToQuestions" StoreEntitySet="FakeAnswersToQuestions">
+      <EndProperty Name="Answers">
+        <ScalarProperty Name="A_Id" ColumnName="Answer" />
+      </EndProperty>
+      <EndProperty Name="Questions">
+        <ScalarProperty Name="Q_Id" ColumnName="Question" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="GamePlayers" TypeName="FilmQuizDBModel.GamePlayers" StoreEntitySet="GamePlayers">
+      <EndProperty Name="Players">
+        <ScalarProperty Name="P_Id" ColumnName="Player" />
+      </EndProperty>
+      <EndProperty Name="Games">
+        <ScalarProperty Name="G_Id" ColumnName="Game" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="GameQuestions" TypeName="FilmQuizDBModel.GameQuestions" StoreEntitySet="GameQuestions">
+      <EndProperty Name="Questions">
+        <ScalarProperty Name="Q_Id" ColumnName="Question" />
+      </EndProperty>
+      <EndProperty Name="Games">
+        <ScalarProperty Name="G_Id" ColumnName="Game" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

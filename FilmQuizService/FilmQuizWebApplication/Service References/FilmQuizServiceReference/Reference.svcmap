@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b900e0e7-7c8f-44f3-8d87-b1e576fa07c9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://filmquiz.cloudapp.net/FilmQuiz.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FilmQuiz.xsd" MetadataType="Schema" ID="6fbf8c55-ba69-4127-972a-0bccd5928444" SourceId="1" SourceUrl="http://filmquiz.cloudapp.net/FilmQuiz.svc?xsd=xsd0" />
+    <MetadataFile FileName="FilmQuiz.wsdl" MetadataType="Wsdl" ID="3262335f-616d-4f75-871c-b25d1a9b5f0a" SourceId="1" SourceUrl="http://filmquiz.cloudapp.net/FilmQuiz.svc?wsdl" />
+    <MetadataFile FileName="FilmQuiz.disco" MetadataType="Disco" ID="36daf970-c73f-4f62-87e2-33a7973f9a55" SourceId="1" SourceUrl="http://filmquiz.cloudapp.net/FilmQuiz.svc?disco" />
+    <MetadataFile FileName="FilmQuiz1.xsd" MetadataType="Schema" ID="f9ab4238-408b-4221-97db-595b2372b9e9" SourceId="1" SourceUrl="http://filmquiz.cloudapp.net/FilmQuiz.svc?xsd=xsd2" />
+    <MetadataFile FileName="FilmQuiz2.xsd" MetadataType="Schema" ID="4a6bbf6f-4e06-45ce-ac55-c32c43dcc8bd" SourceId="1" SourceUrl="http://filmquiz.cloudapp.net/FilmQuiz.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

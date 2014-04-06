@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bbd334cc-aeaf-45cc-b980-fc6c4d745aac" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1102/FilmQuiz.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FilmQuiz.disco" MetadataType="Disco" ID="e8527ee7-b181-420e-b104-1b2345b94c3c" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?disco" />
+    <MetadataFile FileName="FilmQuiz.xsd" MetadataType="Schema" ID="3df004f3-ecff-45f7-adb2-6fa2704231b8" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?xsd=xsd1" />
+    <MetadataFile FileName="FilmQuiz1.xsd" MetadataType="Schema" ID="91ff2542-9c6d-4bfe-9cb1-a5018580c1c0" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?xsd=xsd0" />
+    <MetadataFile FileName="FilmQuiz2.xsd" MetadataType="Schema" ID="72c3d684-6bbe-4c2e-864e-7c5217f88810" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?xsd=xsd2" />
+    <MetadataFile FileName="FilmQuiz.wsdl" MetadataType="Wsdl" ID="ad35dfde-9f5b-4a2e-bc76-a536f6fbbe59" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,2 @@
+\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizService\bin\Debug\ServiceConfiguration.cscfg
+\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizService\bin\Debug\ServiceDefinition.csdef
