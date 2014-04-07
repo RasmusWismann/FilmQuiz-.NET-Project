@@ -35,6 +35,7 @@
           <ScalarProperty Name="P_Id" ColumnName="P_Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="Game" ColumnName="Game" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -53,14 +54,6 @@
       </EndProperty>
       <EndProperty Name="Questions">
         <ScalarProperty Name="Q_Id" ColumnName="Question" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="GamePlayers" TypeName="FilmQuizDBModel.GamePlayers" StoreEntitySet="GamePlayers">
-      <EndProperty Name="Players">
-        <ScalarProperty Name="P_Id" ColumnName="Player" />
-      </EndProperty>
-      <EndProperty Name="Games">
-        <ScalarProperty Name="G_Id" ColumnName="Game" />
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="GameQuestions" TypeName="FilmQuizDBModel.GameQuestions" StoreEntitySet="GameQuestions">

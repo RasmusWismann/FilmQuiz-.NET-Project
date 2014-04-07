@@ -27,7 +27,8 @@ CREATE TABLE Players
 (
 P_Id int IDENTITY(1,1) PRIMARY KEY,
 Name varchar(255),
-Points int not null
+Points int not null,
+Game int FOREIGN KEY REFERENCES Games(G_Id)
 )
 
 CREATE TABLE Games 
@@ -40,12 +41,7 @@ CREATE TABLE Games
 	Category int FOREIGN KEY REFERENCES Categories(C_Id),
 )
 
-CREATE TABLE GamePlayers 
-(
-	Player int FOREIGN KEY REFERENCES Players(P_Id),
-	Game int FOREIGN KEY REFERENCES Games(G_Id),
-	PRIMARY KEY(Player, Game)
-)
+
 CREATE TABLE GameQuestions 
 (
 	Game int FOREIGN KEY REFERENCES Games(G_Id),

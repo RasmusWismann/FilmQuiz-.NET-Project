@@ -14,15 +14,11 @@ namespace Storage
     
     public partial class Players
     {
-        public Players()
-        {
-            this.Games = new HashSet<Games>();
-        }
-    
         public int P_Id { get; set; }
         public string Name { get; set; }
         public int Points { get; set; }
+        public Nullable<int> Game { get; set; }
     
-        public virtual ICollection<Games> Games { get; set; }
+        public virtual Games Games { get; set; }
     }
 }

@@ -8,4 +8,3 @@ C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\TestClie
 C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\TestClient\obj\Debug\TestClient.pdb
 C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\TestClient\bin\Debug\TestClient.exe
 C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\TestClient\bin\Debug\TestClient.pdb
-C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\TestClient\obj\Debug\TestClient.csprojResolveAssemblyReference.cache

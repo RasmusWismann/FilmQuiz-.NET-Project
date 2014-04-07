@@ -69,74 +69,89 @@ namespace Storage
             {
                 try
                 {
-                    errorMessage = null;
-                    return null;
+                    // Setting game fields
+                    var newGame = new Games()
+                    {
+                        Name = game.Name,
+                        PlayerTurn = 1,
+                        TurnNumber = 1,
+                        Turns = game.Turns,
+                    };
+
+                    // Check if category is all or specific
+                    if (game.Category == null)
+                    {
+                        newGame.Category = null;
+                    }
+
+                    // Creates game in db
+                    dbContext.Games.Add(newGame);
+                    dbContext.SaveChanges();
+
+                    // Add players
+                    string em = "";
+                    AddPlayersToGame(game.Players, newGame.G_Id, out em);
+
+                    // TODO - Add Questions
+
+                    // Error handling
+                    if (!string.IsNullOrEmpty(em))
+                    {
+                        errorMessage = em;
+                        return null;
+                    }
+
+                    else
+                    {
+                        var getGame = GetGame(newGame.G_Id, out em);
+                        if (!string.IsNullOrEmpty(em))
+                        {
+                            errorMessage = em;
+                            return null;
+                        }
+                        else { errorMessage = null; return getGame; }
+                    }
                 }
+
                 catch(Exception e)
                 {
                     errorMessage = "Something went wrong on the server: " + e.Message;
                     return null;
                 }
             }
-            
-
         }
 
-        //public static CategoryDTO AddNewCategory(CategoryDTO cat)
-        //{
-        //    using (var dbContext = new FilmQuizDBEntities())
-        //    {
-        //        var category = new Categories 
-        //        {
-        //            Name = cat.Name
-        //        };
+        public static GameDTO GetGame(int id, out string errorMessage)
+        {
+            throw new NotImplementedException();
+        }
 
-        //        dbContext.Categories.Add(category);
-        //        dbContext.SaveChanges();
+        private static void AddPlayersToGame(List<PlayerDTO> players, int gameId, out string errorMessage)
+        {
+            using (var dbContext = new FilmQuizDBEntities())
+            {
+                try
+                {
+                    foreach (var p in players)
+                    {
+                        var newPlayer = new Players
+                        {
+                            Name = p.Name,
+                            Game = gameId,
+                            Points = 0,
+                        };
+                        dbContext.Players.Add(newPlayer);
+                    }
+                    dbContext.SaveChanges();
 
-        //        return new CategoryDTO
-        //        {
-        //            Id = category.C_Id,
-        //            Name = category.Name
-        //        };
-        //    }
-        //}
+                    errorMessage = null;
+                }
 
-        //public static CategoryDTO EditCategory(CategoryDTO cat)
-        //{
-        //    using (var dbContext = new FilmQuizDBEntities())
-        //    {
-        //        var category = dbContext.Categories
-        //            .Where(c => c.C_Id == cat.Id)
-        //            .Single();
-                
-        //        category.Name = cat.Name;
-
-        //        dbContext.SaveChanges();
-
-        //        return new CategoryDTO
-        //        {
-        //            Id = category.C_Id,
-        //            Name = category.Name
-        //        };
-        //    }
-        //}
-
-        
-
-        //public static void DeleteCategory(int id)
-        //{
-        //    using (var dbContext = new FilmQuizDBEntities())
-        //    {
-        //        var category = dbContext.Categories
-        //            .Where(c => c.C_Id == id)
-        //            .Single();
-
-        //        dbContext.Categories.Remove(category);
-        //        dbContext.SaveChanges();
-        //    }
-        //}
-
-        
+                catch(Exception e)
+                {
+                    errorMessage = "Something went wrong on the server: " + e.Message;
+                }
+            }
+        }
     }
 }

@@ -22,14 +22,6 @@
     <Property Name="Question" Type="int" Nullable="false" />
     <Property Name="Answer" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="GamePlayers">
-    <Key>
-      <PropertyRef Name="Player" />
-      <PropertyRef Name="Game" />
-    </Key>
-    <Property Name="Player" Type="int" Nullable="false" />
-    <Property Name="Game" Type="int" Nullable="false" />
-  </EntityType>
   <EntityType Name="GameQuestions">
     <Key>
       <PropertyRef Name="Game" />
@@ -56,6 +48,7 @@
     <Property Name="P_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="255" />
     <Property Name="Points" Type="int" Nullable="false" />
+    <Property Name="Game" Type="int" />
   </EntityType>
   <EntityType Name="Questions">
     <Key>
@@ -86,30 +79,6 @@
       </Principal>
       <Dependent Role="FakeAnswersToQuestions">
         <PropertyRef Name="Question" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__GamePlaye__Playe__656C112C">
-    <End Role="Players" Type="Self.Players" Multiplicity="1" />
-    <End Role="GamePlayers" Type="Self.GamePlayers" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Players">
-        <PropertyRef Name="P_Id" />
-      </Principal>
-      <Dependent Role="GamePlayers">
-        <PropertyRef Name="Player" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__GamePlayer__Game__66603565">
-    <End Role="Games" Type="Self.Games" Multiplicity="1" />
-    <End Role="GamePlayers" Type="Self.GamePlayers" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Games">
-        <PropertyRef Name="G_Id" />
-      </Principal>
-      <Dependent Role="GamePlayers">
-        <PropertyRef Name="Game" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -149,6 +118,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__Players__Game__6E01572D">
+    <End Role="Games" Type="Self.Games" Multiplicity="0..1" />
+    <End Role="Players" Type="Self.Players" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="G_Id" />
+      </Principal>
+      <Dependent Role="Players">
+        <PropertyRef Name="Game" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__Questions__Answe__49C3F6B7">
     <End Role="Answers" Type="Self.Answers" Multiplicity="0..1" />
     <End Role="Questions" Type="Self.Questions" Multiplicity="*" />
@@ -165,7 +146,6 @@
     <EntitySet Name="Answers" EntityType="Self.Answers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FakeAnswersToQuestions" EntityType="Self.FakeAnswersToQuestions" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="GamePlayers" EntityType="Self.GamePlayers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GameQuestions" EntityType="Self.GameQuestions" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Games" EntityType="Self.Games" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Players" EntityType="Self.Players" Schema="dbo" store:Type="Tables" />
@@ -178,14 +158,6 @@
       <End Role="Questions" EntitySet="Questions" />
       <End Role="FakeAnswersToQuestions" EntitySet="FakeAnswersToQuestions" />
     </AssociationSet>
-    <AssociationSet Name="FK__GamePlaye__Playe__656C112C" Association="Self.FK__GamePlaye__Playe__656C112C">
-      <End Role="Players" EntitySet="Players" />
-      <End Role="GamePlayers" EntitySet="GamePlayers" />
-    </AssociationSet>
-    <AssociationSet Name="FK__GamePlayer__Game__66603565" Association="Self.FK__GamePlayer__Game__66603565">
-      <End Role="Games" EntitySet="Games" />
-      <End Role="GamePlayers" EntitySet="GamePlayers" />
-    </AssociationSet>
     <AssociationSet Name="FK__GameQuest__Quest__60A75C0F" Association="Self.FK__GameQuest__Quest__60A75C0F">
       <End Role="Questions" EntitySet="Questions" />
       <End Role="GameQuestions" EntitySet="GameQuestions" />
@@ -197,6 +169,10 @@
     <AssociationSet Name="FK__Games__Category__5CD6CB2B" Association="Self.FK__Games__Category__5CD6CB2B">
       <End Role="Categories" EntitySet="Categories" />
       <End Role="Games" EntitySet="Games" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Players__Game__6E01572D" Association="Self.FK__Players__Game__6E01572D">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Players" EntitySet="Players" />
     </AssociationSet>
     <AssociationSet Name="FK__Questions__Answe__49C3F6B7" Association="Self.FK__Questions__Answe__49C3F6B7">
       <End Role="Answers" EntitySet="Answers" />
