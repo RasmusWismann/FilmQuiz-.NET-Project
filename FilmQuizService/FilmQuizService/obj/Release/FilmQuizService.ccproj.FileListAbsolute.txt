@@ -41,3 +41,46 @@
 \\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizService\obj\Release\WCFService\FilmQuiz.svc
 \\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizService\obj\Release\WCFService\packages.config
 \\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizService\obj\Release\WCFService\Web.config
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\bin\Release\ServiceConfiguration.cscfg
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\bin\Release\ServiceDefinition.csdef
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\de\System.Spatial.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\EntityFramework.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\EntityFramework.SqlServer.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\es\System.Spatial.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\fr\System.Spatial.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\it\System.Spatial.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\ja\System.Spatial.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\ko\System.Spatial.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\Microsoft.Data.Edm.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\Microsoft.Data.OData.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\Microsoft.WindowsAzure.Diagnostics.StorageUtility.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\Microsoft.WindowsAzure.Storage.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\ru\System.Spatial.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\Storage.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\System.Spatial.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\WCFService.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\FilmQuiz.svc
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\packages.config
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\Web.config

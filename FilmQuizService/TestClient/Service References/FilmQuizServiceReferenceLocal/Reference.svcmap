@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost:1102/FilmQuiz.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="FilmQuiz.disco" MetadataType="Disco" ID="e8527ee7-b181-420e-b104-1b2345b94c3c" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?disco" />
+    <MetadataFile FileName="FilmQuiz3.xsd" MetadataType="Schema" ID="d91bd7a0-b602-4ccf-b71b-1d33e29469e1" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?xsd=xsd3" />
     <MetadataFile FileName="FilmQuiz.xsd" MetadataType="Schema" ID="3df004f3-ecff-45f7-adb2-6fa2704231b8" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?xsd=xsd1" />
     <MetadataFile FileName="FilmQuiz1.xsd" MetadataType="Schema" ID="91ff2542-9c6d-4bfe-9cb1-a5018580c1c0" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?xsd=xsd0" />
-    <MetadataFile FileName="FilmQuiz2.xsd" MetadataType="Schema" ID="72c3d684-6bbe-4c2e-864e-7c5217f88810" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?xsd=xsd2" />
     <MetadataFile FileName="FilmQuiz.wsdl" MetadataType="Wsdl" ID="ad35dfde-9f5b-4a2e-bc76-a536f6fbbe59" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?wsdl" />
+    <MetadataFile FileName="FilmQuiz.disco" MetadataType="Disco" ID="e8527ee7-b181-420e-b104-1b2345b94c3c" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?disco" />
+    <MetadataFile FileName="FilmQuiz2.xsd" MetadataType="Schema" ID="72c3d684-6bbe-4c2e-864e-7c5217f88810" SourceId="1" SourceUrl="http://localhost:1102/FilmQuiz.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

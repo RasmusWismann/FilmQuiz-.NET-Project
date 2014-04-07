@@ -30,14 +30,14 @@
     <Property name="Configuration" value="Release" />
     <Property name="Platform" value="AnyCPU" />
     <Property name="RoleTargetFramework" value="v4.5.1" />
-    <Property name="OutputDir" value="\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizService\obj\Release\WCFService\" />
+    <Property name="OutputDir" value="C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\" />
     <Property name="EntryPoint" value="WCFService.dll" />
-    <Property name="SourceDir" value="\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\WCFService\" />
-    <Property name="SitePhysicalPath" value="\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizService\obj\Release\WCFService\" />
+    <Property name="SourceDir" value="C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\WCFService\" />
+    <Property name="SitePhysicalPath" value="C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\" />
     <Property name="TargetRuntimeVersion" value="v4.0" />
   </Properties>
   <Sites>
-    <Site name="Web" physicalDirectory="\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizService\obj\Release\WCFService\">
+    <Site name="Web" physicalDirectory="C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\obj\Release\WCFService\">
       <Bindings>
         <Binding name="Endpoint1" endpointName="Endpoint1" />
       </Bindings>

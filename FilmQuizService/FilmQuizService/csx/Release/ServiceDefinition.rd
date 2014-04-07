@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FilmQuizService" generation="1" functional="0" release="0" Id="818f8ac4-b84d-4533-a8d6-97a8395c1ae1" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FilmQuizService" generation="1" functional="0" release="0" Id="8a4cc6de-0c4e-4e82-a2ae-b2d21b209fb4" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="FilmQuizServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -42,7 +42,7 @@
       </maps>
       <components>
         <groupHascomponents>
-          <role name="WCFService" generation="1" functional="0" release="0" software="\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizService\csx\Release\roles\WCFService" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="1792" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
+          <role name="WCFService" generation="1" functional="0" release="0" software="C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\csx\Release\roles\WCFService" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="1792" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
               <inPort name="Endpoint1" protocol="http" portRanges="80" />
             </componentports>
@@ -71,9 +71,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="20c8450c-ba32-4734-983b-bff35e10a1ae" ref="Microsoft.RedDog.Contract\ServiceContract\FilmQuizServiceContract@ServiceDefinition">
+    <implementation Id="e9b00056-c86c-4d00-9f29-987a2814b5ce" ref="Microsoft.RedDog.Contract\ServiceContract\FilmQuizServiceContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="50e41990-8dfc-4f96-a420-8a571f65f8a4" ref="Microsoft.RedDog.Contract\Interface\WCFService:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="edd93b78-9d47-4e42-826f-ed46815e9979" ref="Microsoft.RedDog.Contract\Interface\WCFService:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/FilmQuizService/FilmQuizServiceGroup/WCFService:Endpoint1" />
           </inPort>

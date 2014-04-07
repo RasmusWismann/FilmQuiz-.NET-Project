@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Storage.DTO_s" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Storage.DTO_s" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1102/FilmQuiz.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Storage.DTO_s.Enums" />
+  <xs:complexType name="ResponseDTOOfCategoryDTOG2FmXW_SN">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseDTOOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Storage.DTO_s" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="CategoryDTO" Namespace="http://schemas.datacontract.org/2004/07/Storage.DTO_s" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="tns:CategoryDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Storage.DTO_s.Enums" minOccurs="0" name="Status" type="q1:Status" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseDTOOfCategoryDTOG2FmXW_SN" nillable="true" type="tns:ResponseDTOOfCategoryDTOG2FmXW_SN" />
   <xs:complexType name="CategoryDTO">
     <xs:sequence>
       <xs:element minOccurs="0" name="Id" type="xs:int" />
@@ -7,10 +23,66 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CategoryDTO" nillable="true" type="tns:CategoryDTO" />
+  <xs:complexType name="ResponseDTOOfArrayOfCategoryDTOG2FmXW_SN">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseDTOOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Storage.DTO_s" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfCategoryDTO" Namespace="http://schemas.datacontract.org/2004/07/Storage.DTO_s" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="tns:ArrayOfCategoryDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Storage.DTO_s.Enums" minOccurs="0" name="Status" type="q2:Status" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseDTOOfArrayOfCategoryDTOG2FmXW_SN" nillable="true" type="tns:ResponseDTOOfArrayOfCategoryDTOG2FmXW_SN" />
   <xs:complexType name="ArrayOfCategoryDTO">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="CategoryDTO" nillable="true" type="tns:CategoryDTO" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfCategoryDTO" nillable="true" type="tns:ArrayOfCategoryDTO" />
+  <xs:complexType name="GameDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Category" nillable="true" type="tns:CategoryDTO" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlayerTurn" type="xs:int" />
+      <xs:element minOccurs="0" name="Players" nillable="true" type="tns:ArrayOfPlayerDTO" />
+      <xs:element minOccurs="0" name="TurnNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Turns" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GameDTO" nillable="true" type="tns:GameDTO" />
+  <xs:complexType name="ArrayOfPlayerDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlayerDTO" nillable="true" type="tns:PlayerDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlayerDTO" nillable="true" type="tns:ArrayOfPlayerDTO" />
+  <xs:complexType name="PlayerDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Points" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlayerDTO" nillable="true" type="tns:PlayerDTO" />
+  <xs:complexType name="ResponseDTOOfGameDTOG2FmXW_SN">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseDTOOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Storage.DTO_s" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="GameDTO" Namespace="http://schemas.datacontract.org/2004/07/Storage.DTO_s" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="tns:GameDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Storage.DTO_s.Enums" minOccurs="0" name="Status" type="q3:Status" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseDTOOfGameDTOG2FmXW_SN" nillable="true" type="tns:ResponseDTOOfGameDTOG2FmXW_SN" />
 </xs:schema>

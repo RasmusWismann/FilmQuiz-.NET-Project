@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:1102/FilmQuiz.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Storage.DTO_s" />
-  <xs:element name="CreateCategory">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Storage.DTO_s" minOccurs="0" name="category" nillable="true" type="q1:CategoryDTO" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CreateCategoryResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Storage.DTO_s" minOccurs="0" name="CreateCategoryResult" nillable="true" type="q2:CategoryDTO" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="EditCategory">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Storage.DTO_s" minOccurs="0" name="category" nillable="true" type="q3:CategoryDTO" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="EditCategoryResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Storage.DTO_s" minOccurs="0" name="EditCategoryResult" nillable="true" type="q4:CategoryDTO" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="GetCategory">
     <xs:complexType>
       <xs:sequence>
@@ -39,20 +11,8 @@
   <xs:element name="GetCategoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Storage.DTO_s" minOccurs="0" name="GetCategoryResult" nillable="true" type="q5:CategoryDTO" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Storage.DTO_s" minOccurs="0" name="GetCategoryResult" nillable="true" type="q1:ResponseDTOOfCategoryDTOG2FmXW_SN" />
       </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="DeleteCategory">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="DeleteCategoryResponse">
-    <xs:complexType>
-      <xs:sequence />
     </xs:complexType>
   </xs:element>
   <xs:element name="GetAllCategories">
@@ -63,7 +23,21 @@
   <xs:element name="GetAllCategoriesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Storage.DTO_s" minOccurs="0" name="GetAllCategoriesResult" nillable="true" type="q6:ArrayOfCategoryDTO" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Storage.DTO_s" minOccurs="0" name="GetAllCategoriesResult" nillable="true" type="q2:ResponseDTOOfArrayOfCategoryDTOG2FmXW_SN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateNewGame">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Storage.DTO_s" minOccurs="0" name="game" nillable="true" type="q3:GameDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateNewGameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Storage.DTO_s" minOccurs="0" name="CreateNewGameResult" nillable="true" type="q4:ResponseDTOOfGameDTOG2FmXW_SN" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

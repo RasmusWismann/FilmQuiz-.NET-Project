@@ -72,7 +72,16 @@
     <None Include="Service References\FilmQuizServiceReferenceLocal\FilmQuiz2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\FilmQuizServiceReferenceLocal\TestClient.FilmQuizServiceReferenceLocal.CategoryDTO.datasource">
+    <None Include="Service References\FilmQuizServiceReferenceLocal\FilmQuiz3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FilmQuizServiceReferenceLocal\TestClient.FilmQuizServiceReferenceLocal.ResponseDTOOfArrayOfCategoryDTOG2FmXW_SN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FilmQuizServiceReferenceLocal\TestClient.FilmQuizServiceReferenceLocal.ResponseDTOOfCategoryDTOG2FmXW_SN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FilmQuizServiceReferenceLocal\TestClient.FilmQuizServiceReferenceLocal.ResponseDTOOfGameDTOG2FmXW_SN.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\FilmQuizServiceReference\FilmQuiz.wsdl" />

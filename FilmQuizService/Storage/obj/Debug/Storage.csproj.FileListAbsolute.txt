@@ -7,3 +7,12 @@
 \\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\Storage\bin\Debug\EntityFramework.SqlServer.xml
 \\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\Storage\obj\Debug\Storage.dll
 \\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\Storage\obj\Debug\Storage.pdb
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\bin\Debug\Storage.dll.config
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\bin\Debug\Storage.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\bin\Debug\Storage.pdb
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\bin\Debug\EntityFramework.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\bin\Debug\EntityFramework.xml
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\obj\Debug\Storage.dll
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\obj\Debug\Storage.pdb

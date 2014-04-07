@@ -3,3 +3,9 @@
 \\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\TestClient\bin\Debug\TestClient.pdb
 \\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\TestClient\obj\Debug\TestClient.exe
 \\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\TestClient\obj\Debug\TestClient.pdb
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\TestClient\bin\Debug\TestClient.exe.config
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\TestClient\obj\Debug\TestClient.exe
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\TestClient\obj\Debug\TestClient.pdb
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\TestClient\bin\Debug\TestClient.exe
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\TestClient\bin\Debug\TestClient.pdb
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\TestClient\obj\Debug\TestClient.csprojResolveAssemblyReference.cache

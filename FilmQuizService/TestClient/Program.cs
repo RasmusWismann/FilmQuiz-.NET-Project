@@ -13,24 +13,28 @@ namespace TestClient
 
         static void Main(string[] args)
         {
+            Client.Open();
             System.Console.ReadKey();
+            Client.Close();
         }
 
-        private void TestGetAllCategories() 
+        private static void TestGetAllCategories() 
         {
-            var catList = Client.GetAllCategories();
+            var response = Client.GetAllCategories();
 
-            foreach (var c in catList)
+            foreach (var c in response.Data)
             {
                 Console.WriteLine(c.Name);
                 Console.WriteLine(c.Id);
             }
         }
 
-        private void TestGetCategory()
+        private static void TestGetCategory()
         {
-            Client.GetCategory(4);
-            
+            var response = Client.GetCategory(4);
+
+            Console.WriteLine(response.Data.Name);
+            Console.WriteLine(response.Data.Id);
         }
     }
 }

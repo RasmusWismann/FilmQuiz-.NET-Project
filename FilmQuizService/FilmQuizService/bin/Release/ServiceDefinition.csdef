@@ -28,7 +28,7 @@
     </LocalResources>
     <Contents>
       <Content destination=".\">
-        <SourceDirectory path="\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizService\rcf\Release\WCFServiceContent\" />
+        <SourceDirectory path="C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizService\rcf\Release\WCFServiceContent\" />
       </Content>
     </Contents>
   </WebRole>

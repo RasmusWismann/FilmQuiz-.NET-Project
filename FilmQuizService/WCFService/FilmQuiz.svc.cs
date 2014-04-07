@@ -18,7 +18,7 @@ namespace WCFService
             string errorMessage = "";
             var result = DbAccessor.GetCategory(id, out errorMessage);
 
-            if (string.IsNullOrEmpty(errorMessage))
+            if (!string.IsNullOrEmpty(errorMessage))
             {
                 return new ResponseDTO<CategoryDTO>
                 {
@@ -43,7 +43,7 @@ namespace WCFService
             string errorMessage = "";
             var result = DbAccessor.GetCategories(out errorMessage);
 
-            if (string.IsNullOrEmpty(errorMessage))
+            if (!string.IsNullOrEmpty(errorMessage))
             {
                 return new ResponseDTO<List<CategoryDTO>>
                 {
