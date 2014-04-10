@@ -14,6 +14,7 @@ CREATE TABLE Questions
 (
 Q_Id int IDENTITY(1,1) PRIMARY KEY,
 Question varchar(255) NOT NULL,
+Category int FOREIGN KEY REFERENCES Categories(C_Id),
 Answer int FOREIGN KEY REFERENCES Answers(A_Id)
 )
 
@@ -28,6 +29,7 @@ CREATE TABLE Players
 P_Id int IDENTITY(1,1) PRIMARY KEY,
 Name varchar(255),
 Points int not null,
+Number int not null,
 Game int FOREIGN KEY REFERENCES Games(G_Id)
 )
 

@@ -17,11 +17,13 @@ namespace Storage
         public Categories()
         {
             this.Games = new HashSet<Games>();
+            this.Questions = new HashSet<Questions>();
         }
     
         public int C_Id { get; set; }
         public string Name { get; set; }
     
         public virtual ICollection<Games> Games { get; set; }
+        public virtual ICollection<Questions> Questions { get; set; }
     }
 }

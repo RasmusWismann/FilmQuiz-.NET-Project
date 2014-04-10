@@ -65,7 +65,53 @@ namespace WCFService
 
         public ResponseDTO<GameDTO> CreateNewGame(GameDTO game)
         {
-            throw new NotImplementedException();
+            string errorMessage = "";
+            var result = DbAccessor.CreateNewGame(game, out errorMessage);
+
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                return new ResponseDTO<GameDTO>
+                {
+                    ErrorMessage = errorMessage,
+                    Status = Status.Failure,
+                    Data = null
+                };
+            }
+            else
+            {
+                return new ResponseDTO<GameDTO>
+                {
+                    ErrorMessage = null,
+                    Status = Status.Success,
+                    Data = result
+                };
+            }
+        }
+
+
+        public ResponseDTO<GameDTO> GetGame(int id)
+        {
+            string errorMessage = "";
+            var result = DbAccessor.GetGame(id, out errorMessage);
+
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                return new ResponseDTO<GameDTO>
+                {
+                    ErrorMessage = errorMessage,
+                    Status = Status.Failure,
+                    Data = null
+                };
+            }
+            else
+            {
+                return new ResponseDTO<GameDTO>
+                {
+                    ErrorMessage = null,
+                    Status = Status.Success,
+                    Data = result
+                };
+            }
         }
     }
     

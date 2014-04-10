@@ -17,6 +17,8 @@ namespace Storage.DTO_s
         [DataMember]
         public AnswerDTO Answer { get; set; }
         [DataMember]
+        public CategoryDTO Category { get; set; }
+        [DataMember]
         public List<AnswerDTO> FakeAnswers { get; set; }
     }
 }

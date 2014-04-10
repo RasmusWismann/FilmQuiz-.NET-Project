@@ -16,5 +16,7 @@ namespace Storage.DTO_s
         public string Name { get; set; }
         [DataMember]
         public int Points { get; set; }
+        [DataMember]
+        public int Number { get; set; }
     }
 }

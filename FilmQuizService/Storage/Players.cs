@@ -18,6 +18,7 @@ namespace Storage
         public string Name { get; set; }
         public int Points { get; set; }
         public Nullable<int> Game { get; set; }
+        public int Number { get; set; }
     
         public virtual Games Games { get; set; }
     }

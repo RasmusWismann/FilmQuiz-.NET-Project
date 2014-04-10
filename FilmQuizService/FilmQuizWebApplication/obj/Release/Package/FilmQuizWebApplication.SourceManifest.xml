@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizWebApplication\obj\Release\Package\PackageTmp" />
-  <setAcl path="\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizWebApplication\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="\\psf\Home\Documents\Visual Studio 2013\Projects\FilmQuizService\FilmQuizWebApplication\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizWebApplication\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizWebApplication\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizWebApplication\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>

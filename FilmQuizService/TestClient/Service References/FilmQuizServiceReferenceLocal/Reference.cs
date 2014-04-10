@@ -172,7 +172,7 @@ namespace TestClient.FilmQuizServiceReferenceLocal {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestClient.FilmQuizServiceReferenceLocal.CategoryDTO[] DataField;
+        private System.Collections.Generic.List<TestClient.FilmQuizServiceReferenceLocal.CategoryDTO> DataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ErrorMessageField;
@@ -191,7 +191,7 @@ namespace TestClient.FilmQuizServiceReferenceLocal {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestClient.FilmQuizServiceReferenceLocal.CategoryDTO[] Data {
+        public System.Collections.Generic.List<TestClient.FilmQuizServiceReferenceLocal.CategoryDTO> Data {
             get {
                 return this.DataField;
             }
@@ -261,7 +261,10 @@ namespace TestClient.FilmQuizServiceReferenceLocal {
         private int PlayerTurnField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestClient.FilmQuizServiceReferenceLocal.PlayerDTO[] PlayersField;
+        private System.Collections.Generic.List<TestClient.FilmQuizServiceReferenceLocal.PlayerDTO> PlayersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<TestClient.FilmQuizServiceReferenceLocal.QuestionDTO> QuestionsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int TurnNumberField;
@@ -332,7 +335,7 @@ namespace TestClient.FilmQuizServiceReferenceLocal {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestClient.FilmQuizServiceReferenceLocal.PlayerDTO[] Players {
+        public System.Collections.Generic.List<TestClient.FilmQuizServiceReferenceLocal.PlayerDTO> Players {
             get {
                 return this.PlayersField;
             }
@@ -340,6 +343,19 @@ namespace TestClient.FilmQuizServiceReferenceLocal {
                 if ((object.ReferenceEquals(this.PlayersField, value) != true)) {
                     this.PlayersField = value;
                     this.RaisePropertyChanged("Players");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<TestClient.FilmQuizServiceReferenceLocal.QuestionDTO> Questions {
+            get {
+                return this.QuestionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QuestionsField, value) != true)) {
+                    this.QuestionsField = value;
+                    this.RaisePropertyChanged("Questions");
                 }
             }
         }
@@ -396,6 +412,9 @@ namespace TestClient.FilmQuizServiceReferenceLocal {
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int PointsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -435,6 +454,19 @@ namespace TestClient.FilmQuizServiceReferenceLocal {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Number {
+            get {
+                return this.NumberField;
+            }
+            set {
+                if ((this.NumberField.Equals(value) != true)) {
+                    this.NumberField = value;
+                    this.RaisePropertyChanged("Number");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Points {
             get {
                 return this.PointsField;
@@ -443,6 +475,176 @@ namespace TestClient.FilmQuizServiceReferenceLocal {
                 if ((this.PointsField.Equals(value) != true)) {
                     this.PointsField = value;
                     this.RaisePropertyChanged("Points");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="QuestionDTO", Namespace="http://schemas.datacontract.org/2004/07/Storage.DTO_s")]
+    [System.SerializableAttribute()]
+    public partial class QuestionDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.FilmQuizServiceReferenceLocal.AnswerDTO AnswerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestClient.FilmQuizServiceReferenceLocal.CategoryDTO CategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<TestClient.FilmQuizServiceReferenceLocal.AnswerDTO> FakeAnswersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string QuestionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.FilmQuizServiceReferenceLocal.AnswerDTO Answer {
+            get {
+                return this.AnswerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AnswerField, value) != true)) {
+                    this.AnswerField = value;
+                    this.RaisePropertyChanged("Answer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestClient.FilmQuizServiceReferenceLocal.CategoryDTO Category {
+            get {
+                return this.CategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CategoryField, value) != true)) {
+                    this.CategoryField = value;
+                    this.RaisePropertyChanged("Category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<TestClient.FilmQuizServiceReferenceLocal.AnswerDTO> FakeAnswers {
+            get {
+                return this.FakeAnswersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FakeAnswersField, value) != true)) {
+                    this.FakeAnswersField = value;
+                    this.RaisePropertyChanged("FakeAnswers");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Question {
+            get {
+                return this.QuestionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QuestionField, value) != true)) {
+                    this.QuestionField = value;
+                    this.RaisePropertyChanged("Question");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AnswerDTO", Namespace="http://schemas.datacontract.org/2004/07/Storage.DTO_s")]
+    [System.SerializableAttribute()]
+    public partial class AnswerDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AnswerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Answer {
+            get {
+                return this.AnswerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AnswerField, value) != true)) {
+                    this.AnswerField = value;
+                    this.RaisePropertyChanged("Answer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -555,6 +757,12 @@ namespace TestClient.FilmQuizServiceReferenceLocal {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFilmQuiz/CreateNewGame", ReplyAction="http://tempuri.org/IFilmQuiz/CreateNewGameResponse")]
         System.Threading.Tasks.Task<TestClient.FilmQuizServiceReferenceLocal.ResponseDTOOfGameDTOG2FmXW_SN> CreateNewGameAsync(TestClient.FilmQuizServiceReferenceLocal.GameDTO game);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFilmQuiz/GetGame", ReplyAction="http://tempuri.org/IFilmQuiz/GetGameResponse")]
+        TestClient.FilmQuizServiceReferenceLocal.ResponseDTOOfGameDTOG2FmXW_SN GetGame(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFilmQuiz/GetGame", ReplyAction="http://tempuri.org/IFilmQuiz/GetGameResponse")]
+        System.Threading.Tasks.Task<TestClient.FilmQuizServiceReferenceLocal.ResponseDTOOfGameDTOG2FmXW_SN> GetGameAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -606,6 +814,14 @@ namespace TestClient.FilmQuizServiceReferenceLocal {
         
         public System.Threading.Tasks.Task<TestClient.FilmQuizServiceReferenceLocal.ResponseDTOOfGameDTOG2FmXW_SN> CreateNewGameAsync(TestClient.FilmQuizServiceReferenceLocal.GameDTO game) {
             return base.Channel.CreateNewGameAsync(game);
+        }
+        
+        public TestClient.FilmQuizServiceReferenceLocal.ResponseDTOOfGameDTOG2FmXW_SN GetGame(int id) {
+            return base.Channel.GetGame(id);
+        }
+        
+        public System.Threading.Tasks.Task<TestClient.FilmQuizServiceReferenceLocal.ResponseDTOOfGameDTOG2FmXW_SN> GetGameAsync(int id) {
+            return base.Channel.GetGameAsync(id);
         }
     }
 }

@@ -24,6 +24,8 @@ namespace Storage.DTO_s
         public CategoryDTO Category { get; set; }
         [DataMember]
         public List<PlayerDTO> Players { get; set; }
+        [DataMember]
+        public List<QuestionDTO> Questions { get; set; }
 
 
     }

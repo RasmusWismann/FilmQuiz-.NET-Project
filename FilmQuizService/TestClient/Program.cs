@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestClient.FilmQuizServiceReferenceLocal;
 
 namespace TestClient
 {
@@ -14,6 +15,7 @@ namespace TestClient
         static void Main(string[] args)
         {
             Client.Open();
+            TestGetGame();
             System.Console.ReadKey();
             Client.Close();
         }
@@ -36,5 +38,40 @@ namespace TestClient
             Console.WriteLine(response.Data.Name);
             Console.WriteLine(response.Data.Id);
         }
+
+        private static void TestCreateNewGame()
+        {
+            GameDTO testGame = new GameDTO 
+            {
+                Name = "Test Game",
+                Turns = 5,
+                Category = null,
+            };
+
+            var players = new List<PlayerDTO>();
+            for(int i= 0; i<4; i++) 
+            {
+                players.Add( new PlayerDTO 
+                {
+                    Name = "Anders",
+                    Number = i+1
+                });
+            }
+            testGame.Players = players;
+
+            var response = Client.CreateNewGame(testGame);
+
+            Console.WriteLine(response.Data.Id);
+            Console.WriteLine(response.Data.Name);
+        }
+
+        private static void TestGetGame()
+        {
+            var response = Client.GetGame(10);
+
+            Console.WriteLine(response.Data.Id);
+            Console.WriteLine(response.Data.Name);
+        }
+
     }
 }

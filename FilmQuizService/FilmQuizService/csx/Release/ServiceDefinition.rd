@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FilmQuizService" generation="1" functional="0" release="0" Id="8a4cc6de-0c4e-4e82-a2ae-b2d21b209fb4" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FilmQuizService" generation="1" functional="0" release="0" Id="4705ae99-c472-43ba-b075-601bac689a31" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="FilmQuizServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -71,9 +71,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="e9b00056-c86c-4d00-9f29-987a2814b5ce" ref="Microsoft.RedDog.Contract\ServiceContract\FilmQuizServiceContract@ServiceDefinition">
+    <implementation Id="fe7581b4-c5fe-4a48-9618-352b9f276b76" ref="Microsoft.RedDog.Contract\ServiceContract\FilmQuizServiceContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="edd93b78-9d47-4e42-826f-ed46815e9979" ref="Microsoft.RedDog.Contract\Interface\WCFService:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="a996f694-17e6-490e-9f11-3d43fd0c39e1" ref="Microsoft.RedDog.Contract\Interface\WCFService:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/FilmQuizService/FilmQuizServiceGroup/WCFService:Endpoint1" />
           </inPort>

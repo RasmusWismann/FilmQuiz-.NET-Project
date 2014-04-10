@@ -16,4 +16,3 @@ C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\
 C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\obj\Debug\Storage.dll
 C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\obj\Debug\Storage.pdb
-C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\Storage\obj\Debug\Storage.csprojResolveAssemblyReference.cache

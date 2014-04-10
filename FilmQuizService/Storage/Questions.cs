@@ -23,8 +23,10 @@ namespace Storage
         public int Q_Id { get; set; }
         public string Question { get; set; }
         public Nullable<int> Answer { get; set; }
+        public Nullable<int> Category { get; set; }
     
         public virtual Answers Answers { get; set; }
+        public virtual Categories Categories { get; set; }
         public virtual ICollection<Answers> Answers1 { get; set; }
         public virtual ICollection<Games> Games { get; set; }
     }

@@ -4,14 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="68d7f7cf5f5a47dfb76ea03e49ae64c7" Name="Diagram1">
+      <Diagram DiagramId="0df7cb3fd26e4a24b0ad9c0f7e75486f" Name="Diagram1">
         <EntityTypeShape EntityType="FilmQuizDBModel.Answers" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="FilmQuizDBModel.Categories" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmQuizDBModel.Categories" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="FilmQuizDBModel.Games" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="FilmQuizDBModel.Players" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="FilmQuizDBModel.Questions" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmQuizDBModel.Players" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FilmQuizDBModel.Questions" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="FilmQuizDBModel.FK__Questions__Answe__49C3F6B7" ManuallyRouted="false" />
         <AssociationConnector Association="FilmQuizDBModel.FK__Games__Category__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="FilmQuizDBModel.FK__Questions__Categ__6EF57B66" ManuallyRouted="false" />
         <AssociationConnector Association="FilmQuizDBModel.FK__Players__Game__6E01572D" ManuallyRouted="false" />
         <AssociationConnector Association="FilmQuizDBModel.FakeAnswersToQuestions" ManuallyRouted="false" />
         <AssociationConnector Association="FilmQuizDBModel.GameQuestions" ManuallyRouted="false" />

@@ -16,6 +16,7 @@
     <Property Name="C_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Games" Relationship="Self.FK__Games__Category__5CD6CB2B" FromRole="Categories" ToRole="Games" />
+    <NavigationProperty Name="Questions" Relationship="Self.FK__Questions__Categ__6EF57B66" FromRole="Categories" ToRole="Questions" />
   </EntityType>
   <EntityType Name="Games">
     <Key>
@@ -39,6 +40,7 @@
     <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="Points" Type="Int32" Nullable="false" />
     <Property Name="Game" Type="Int32" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Games" Relationship="Self.FK__Players__Game__6E01572D" FromRole="Players" ToRole="Games" />
   </EntityType>
   <EntityType Name="Questions">
@@ -48,7 +50,9 @@
     <Property Name="Q_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Question" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Answer" Type="Int32" />
+    <Property Name="Category" Type="Int32" />
     <NavigationProperty Name="Answers" Relationship="Self.FK__Questions__Answe__49C3F6B7" FromRole="Questions" ToRole="Answers" />
+    <NavigationProperty Name="Categories" Relationship="Self.FK__Questions__Categ__6EF57B66" FromRole="Questions" ToRole="Categories" />
     <NavigationProperty Name="Answers1" Relationship="Self.FakeAnswersToQuestions" FromRole="Questions" ToRole="Answers" />
     <NavigationProperty Name="Games" Relationship="Self.GameQuestions" FromRole="Questions" ToRole="Games" />
   </EntityType>
@@ -72,6 +76,18 @@
         <PropertyRef Name="C_Id" />
       </Principal>
       <Dependent Role="Games">
+        <PropertyRef Name="Category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Questions__Categ__6EF57B66">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="Questions" Type="Self.Questions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="C_Id" />
+      </Principal>
+      <Dependent Role="Questions">
         <PropertyRef Name="Category" />
       </Dependent>
     </ReferentialConstraint>
@@ -109,6 +125,10 @@
     <AssociationSet Name="FK__Games__Category__5CD6CB2B" Association="Self.FK__Games__Category__5CD6CB2B">
       <End Role="Categories" EntitySet="Categories" />
       <End Role="Games" EntitySet="Games" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Questions__Categ__6EF57B66" Association="Self.FK__Questions__Categ__6EF57B66">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Questions" EntitySet="Questions" />
     </AssociationSet>
     <AssociationSet Name="FK__Players__Game__6E01572D" Association="Self.FK__Players__Game__6E01572D">
       <End Role="Games" EntitySet="Games" />

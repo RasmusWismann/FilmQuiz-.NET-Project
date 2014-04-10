@@ -26,6 +26,12 @@
   <wsdl:message name="IFilmQuiz_CreateNewGame_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreateNewGameResponse" />
   </wsdl:message>
+  <wsdl:message name="IFilmQuiz_GetGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGame" />
+  </wsdl:message>
+  <wsdl:message name="IFilmQuiz_GetGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGameResponse" />
+  </wsdl:message>
   <wsdl:portType name="IFilmQuiz">
     <wsdl:operation name="GetCategory">
       <wsdl:input wsaw:Action="http://tempuri.org/IFilmQuiz/GetCategory" message="tns:IFilmQuiz_GetCategory_InputMessage" />
@@ -38,6 +44,10 @@
     <wsdl:operation name="CreateNewGame">
       <wsdl:input wsaw:Action="http://tempuri.org/IFilmQuiz/CreateNewGame" message="tns:IFilmQuiz_CreateNewGame_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IFilmQuiz/CreateNewGameResponse" message="tns:IFilmQuiz_CreateNewGame_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFilmQuiz/GetGame" message="tns:IFilmQuiz_GetGame_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFilmQuiz/GetGameResponse" message="tns:IFilmQuiz_GetGame_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IFilmQuiz" type="tns:IFilmQuiz">
@@ -62,6 +72,15 @@
     </wsdl:operation>
     <wsdl:operation name="CreateNewGame">
       <soap:operation soapAction="http://tempuri.org/IFilmQuiz/CreateNewGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGame">
+      <soap:operation soapAction="http://tempuri.org/IFilmQuiz/GetGame" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

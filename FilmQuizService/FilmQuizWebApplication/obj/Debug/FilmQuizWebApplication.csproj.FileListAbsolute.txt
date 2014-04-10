@@ -46,6 +46,6 @@ C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuiz
 C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizWebApplication\bin\System.Web.WebPages.Razor.xml
 C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizWebApplication\bin\Newtonsoft.Json.xml
 C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizWebApplication\bin\Antlr3.Runtime.pdb
-C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizWebApplication\obj\Debug\FilmQuizWebApplication.csprojResolveAssemblyReference.cache
 C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizWebApplication\obj\Debug\FilmQuizWebApplication.dll
 C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizWebApplication\obj\Debug\FilmQuizWebApplication.pdb
+C:\Users\Rasmus Wismann\Documents\FilmQuiz-.NET-Project\FilmQuizService\FilmQuizWebApplication\obj\Debug\FilmQuizWebApplication.csprojResolveAssemblyReference.cache

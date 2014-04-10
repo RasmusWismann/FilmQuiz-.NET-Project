@@ -2,5 +2,15 @@
     ViewBag.Title = "Index";
 }
 
-This page is supposed to show a list of games
 
+<div class="page-header">
+    <h1>Games</h1>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <button onclick="location.href='@Url.Action("New", "Game")'" type="button" class="btn btn-success btn-lg">
+            New game
+        </button>
+    </div>
+</div>

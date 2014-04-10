@@ -36,6 +36,7 @@
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Points" ColumnName="Points" />
           <ScalarProperty Name="Game" ColumnName="Game" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -45,6 +46,7 @@
           <ScalarProperty Name="Q_Id" ColumnName="Q_Id" />
           <ScalarProperty Name="Question" ColumnName="Question" />
           <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

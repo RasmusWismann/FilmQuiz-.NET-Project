@@ -17,12 +17,36 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Games">
+      <EntityTypeMapping TypeName="FilmQuizDBModel.Games">
+        <MappingFragment StoreEntitySet="Games">
+          <ScalarProperty Name="G_Id" ColumnName="G_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Turns" ColumnName="Turns" />
+          <ScalarProperty Name="PlayerTurn" ColumnName="PlayerTurn" />
+          <ScalarProperty Name="TurnNumber" ColumnName="TurnNumber" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="FilmQuizDBModel.Players">
+        <MappingFragment StoreEntitySet="Players">
+          <ScalarProperty Name="P_Id" ColumnName="P_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="Game" ColumnName="Game" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Questions">
       <EntityTypeMapping TypeName="FilmQuizDBModel.Questions">
         <MappingFragment StoreEntitySet="Questions">
           <ScalarProperty Name="Q_Id" ColumnName="Q_Id" />
           <ScalarProperty Name="Question" ColumnName="Question" />
           <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -32,6 +56,14 @@
       </EndProperty>
       <EndProperty Name="Questions">
         <ScalarProperty Name="Q_Id" ColumnName="Question" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="GameQuestions" TypeName="FilmQuizDBModel.GameQuestions" StoreEntitySet="GameQuestions">
+      <EndProperty Name="Questions">
+        <ScalarProperty Name="Q_Id" ColumnName="Question" />
+      </EndProperty>
+      <EndProperty Name="Games">
+        <ScalarProperty Name="G_Id" ColumnName="Game" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

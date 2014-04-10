@@ -20,5 +20,8 @@ namespace WCFService
 
         [OperationContract]
         ResponseDTO<GameDTO> CreateNewGame(GameDTO game);
+
+        [OperationContract]
+        ResponseDTO<GameDTO> GetGame(int id);
     }
 }
